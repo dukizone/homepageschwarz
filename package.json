@@ -13,7 +13,7 @@
     "react-dom": "^18.2.0",
     "three": "^0.160.0",
     "lucide-react": "^0.300.0",
-    "@google/generative-ai": "^0.20.0",
+   "@google/generative-ai": "^0.20.0",
     "@emailjs/browser": "^3.12.1"
   },
   "devDependencies": {
