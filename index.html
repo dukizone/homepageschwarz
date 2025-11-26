@@ -5,96 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Familienurlaub im Schwarzwald</title>
     <meta name="description" content="Premium Ferienwohnungen im Schwarzwald. Haus Tannenblick & Ferienwohnung Fichtenruh.">
-    
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-      (function(){
-        emailjs.init("YOUR_PUBLIC_KEY"); // Placeholder - wird über constants.ts/Service gesteuert, aber Init hier schadet nicht
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init("YOUR_PUBLIC_KEY");
       })();
     </script>
 
-    <!-- Tailwind CSS (CDN Version für einfache Einrichtung) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              forest: {
-                900: '#1A2F1E', // Dark Green (Primary)
-                950: '#0b140d', // Footer Background
-                800: '#2C4431',
-                700: '#3F5A43', 
-                600: '#55805B',
-                500: '#6CA67A', // Accent
-                400: '#94C69F',
-                300: '#bce0c3',
-                200: '#dcfce3',
-                100: '#E8F5EA', // Light Green Tint
-                50: '#F6F6F1',  // Warm White / Sand
-              }
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              handwriting: ['Inter', 'sans-serif'], // Fallback, ggf. Google Font "Caveat" hinzufügen wenn gewünscht
-            },
-            animation: {
-              'float': 'float 6s ease-in-out infinite',
-              'bounce': 'bounce 1s infinite',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
-              }
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      body {
-        background-color: #F6F6F1;
-        overflow-x: hidden;
-      }
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #3F5A43;
-        border-radius: 4px;
-        opacity: 0.5;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "vite": "https://aistudiocdn.com/vite@^7.2.4",
-    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
-    "three": "https://aistudiocdn.com/three@^0.181.2",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
-  <body>
+    <!-- Dein gebannter Build erstellt die finale CSS-Datei -->
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+
+  <body class="bg-[#F6F6F1] overflow-x-hidden">
     <div id="root"></div>
-    <!-- WICHTIG: Das hier verbindet HTML mit deinem React Code -->
+
+    <!-- React / Vite Einstiegspunkt -->
     <script type="module" src="/src/index.tsx"></script>
-  <script type="module" src="/src/index.tsx"></script>
-</body>
+  </body>
 </html>
